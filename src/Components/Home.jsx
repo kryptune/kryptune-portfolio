@@ -8,9 +8,9 @@ export default function Home() {
         This is the home section where you can find an overview of my work and
         skills.
       </p>
-      <a class="common_btn" href="#">
+      <a className="common_btn" href="#">
         Download CV
-        <i aria-hidden="true" class="fa-solid fa-arrow-down-to-line"></i>
+        <i aria-hidden="true" className="fa-solid fa-arrow-down-to-line"></i>
       </a>
     </section>
   );

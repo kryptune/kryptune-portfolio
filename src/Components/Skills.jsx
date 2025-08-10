@@ -3,7 +3,7 @@ import skillsData from './Data/Skills-data';
 
 export default function Skills() {
     const skillsElements = skillsData.map((skill) => (
-        <div className="skills--container">
+        <div key={skill.id} className="skills--container">
                     <div key={skill.id} className="skills--category">{skill.name}</div>
                     <div className="skills--items"> 
                         {skill.skills.map((item, index) => (

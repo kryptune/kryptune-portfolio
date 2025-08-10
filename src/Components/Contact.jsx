@@ -91,7 +91,7 @@ export default function Contact() {
                     </a>
                 </div>
             </div>
-            <form className='contact-form-container'>
+            <form className='contact-form-container' onSubmit={handleSubmit}>
                 <h2 className='contact-form-title'>Send Me a Message</h2>
                 <div className='name-email-container'>
                     <div className='name-container'>
@@ -103,6 +103,7 @@ export default function Contact() {
                             placeholder="John Wick"
                             value={formData.name}
                             onChange={handleChange}
+                            required
                             className='contact-form-name input'
                         />
                     </div>
@@ -115,6 +116,7 @@ export default function Contact() {
                             placeholder="johnwick@example.com"
                             value={formData.email}
                             onChange={handleChange}
+                            required
                             className='contact-form-email input'
                         />
                     </div>
@@ -127,6 +129,7 @@ export default function Contact() {
                     placeholder="Type your subject title here..."
                     value={formData.subject}
                     onChange={handleChange}
+                    required
                     className='contact-form-subject input'
                 />
                 <label htmlFor="contact-form-message" className='form-label'>Message</label>
@@ -136,9 +139,10 @@ export default function Contact() {
                     placeholder="Your message here..."
                     value={formData.message}
                     onChange={handleChange}
+                    required
                     className='contact-form-message textarea'
                 ></textarea>
-                <button type="submit" className='contact-form-submit'>Send Message</button>
+                <button type="submit" className='contact-form-submit'>{messageStatus}</button>
             </form>
             </div>
         </div>

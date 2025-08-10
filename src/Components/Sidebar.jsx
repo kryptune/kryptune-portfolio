@@ -3,7 +3,7 @@ import links from './Data/Links';
 export default function Sidebar() {
     const linkElements = links.map((link) => (
         <a key={link.title} href={link.link} className="sidebar--link">
-            <span className='sidebar--icon'><i class={link.icon} ></i></span>
+            <span className='sidebar--icon'><i className={link.icon} ></i></span>
             <span className='sidebar--link--title'>{link.title}</span>
         </a>
     )); 
