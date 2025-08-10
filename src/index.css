@@ -1,0 +1,452 @@
+:root {
+  --primary-bg: black;
+  --secondary-bg: rgba(11, 36, 52, 0.6);  
+  --icon-bg: #151C25;
+  --hover-bg: #34E0DA;
+  --card-bg: #1E3F5A;
+  --download-btn-bg: #87CEEB;
+  --text-color-dark: #2B283A;
+  --text-color-light:  #87CEEB;
+  --font-istok-web: "Istok Web", sans-serif;
+  --font-jaini: "Jaini Purva", system-ui;
+  --font-poppins: "Poppins", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif; 
+  --font-rajdani: "Rajdhani", sans-serif;
+  --muted-foreground: 215 20.2% 65.1%;
+} 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary-bg);
+    min-height: 100vh;
+}
+
+.portfolio-app{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 18.2vw;
+    height: 100vh;
+    background-color: rgba(11, 36, 52, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    color: #FBC246;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar--title{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+.sidebar--link{
+    display: flex;
+    width: 65%;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-istok-web);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 3.5vh;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+}
+
+.sidebar--link:hover {
+    color: var(--hover-bg);
+}
+
+.sidebar--link:hover > .sidebar--icon {
+    background-color: var(--hover-bg);
+    color: var(--text-color-dark);
+}
+
+.sidebar--icon {
+  background-color: var(--icon-bg);
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar--link--title{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    margin-left: 18.2vw;
+    width: 81.8vw;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--primary-bg);
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.about-me-title, .skills-title, .project-title, .contact-title {
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: inline-block; 
+    margin: 3vh 0 3vh;
+}
+
+.about-me-title::after, .skills-title::after, .project-title::after, .contact-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%; /* Adjust the width to be half of the text */
+  height: 0.5vh; /* Set the thickness of the line */
+  background-color: var(--hover-bg); /* Choose your color */
+}
+
+
+.about-me {
+    color: #E0E0E0;
+    background-color: var(--secondary-bg);
+    padding: 2vw;
+    font-family: var(--font-open-sans);
+}
+
+.about-me-description {
+    font-size: 2.5vh;
+    line-height: 1.6;
+    margin-top: 2vh;
+    color: (255, 255, 255, 0.5);
+}
+
+.about-me-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 4vh 0 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.about-me-education, .about-me-experience {
+    font-weight: normal;
+    border: solid 0.5px rgba(52, 224, 218, 0.3);
+    border-radius: 2vh;
+    padding: 1.5rem;
+    width: 32vw;
+}
+
+.about-me--title  {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.fa-graduation-cap, .fa-user-tie {
+    font-size: 2rem;
+    color: #34E0DA;
+    margin-right: 0.3rem; 
+}
+
+.about-me-education-degree, .about-me-experience-role {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+
+.skills{
+    padding: 2vw;
+}
+
+.skills--list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin: 2vh 0 3vh;
+}
+
+.skills--container {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    width: 23vw;
+    color: white;
+    font-family: var(--font-istok-web);
+    border: solid 0.5px rgba(52, 224, 218, 0.5);
+    border-radius: 2vh;
+    padding: 4vh;
+}
+
+.skills--category {
+    font-size: 3vh;
+    margin-bottom: 5vh;
+
+}
+
+.skills--items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    margin-left: 0.5vw;
+}
+
+.skills--item {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.7rem;
+    border: solid 0.5px rgba(52, 224, 218, 0.5);
+    font-size: 0.9rem;
+}
+
+
+.project{
+    color: #E0E0E0;
+    background-color: var(--secondary-bg);
+    margin: 0;
+    padding: 2vw;
+}
+
+.project--list {
+    margin: 2vh 0 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.project--card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(11, 36, 52, 0.8);  
+    border-radius: 1vw;
+    width: 33vw;
+    color: var(--text-color-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 78vh;
+    border: solid 0.5px rgba(52, 224, 218, 0.5);
+}
+
+.project--info {
+    display: flex;
+    font-family: var(--font-istok-web);
+    flex-direction: column;
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.project--title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #34E0DA;
+    margin: 0 0 0.5rem;
+}
+
+.project--description {
+    font-size: 1rem;
+    color: #E0E0E0;
+}
+
+.project--tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+    justify-content: center;
+}
+
+.project--tag{
+    background-color: #2B283A;
+    color: #87CEEB;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.7rem;
+    font-size: 0.9rem;
+}
+
+.project--image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 43vh;
+    border-radius: 1vw 1vw 0 0;
+    
+}
+
+.project--image {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.project--image:hover {
+    transform: scale(1.05);
+}
+
+.contact{
+    padding: 2vw;
+    font-family: var(--font-open-sans);
+
+}
+
+.contact-main-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    padding: 1.5vw;
+    gap: 4vw;
+}
+
+.contact-description {
+    width: 70%;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2.2vh;
+}
+
+.contact-info-container{
+    margin: 1.5vh auto 0 3vh;
+}
+
+.icon {
+    color: var(--hover-bg);
+    margin-right: 0.5vw;
+}
+
+.contact-info-title, .contact-social-title {
+    color: white;
+    font-size: 2.5vh;
+    margin-bottom: 4vh;
+}
+
+.contact-info-list{
+    display: flex;
+    flex-direction: column;
+    gap:3.5vh;
+    margin-bottom: 6vh;
+}
+
+.info-title {
+    color: white;
+    margin-right: 0.5vw;
+}
+
+.info-details{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.social-icon{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2.5vw;
+    margin-right: 1.3vw;
+}
+
+.social-icon:hover{
+    color: var(--hover-bg)
+}
+
+.contact-form-container{
+    border: solid 0.5px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 1.1vw;
+    width: 46vw;
+}
+
+.name-email-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
+}
+
+.name-container{
+    margin-right: auto;
+}
+
+.contact-form-title{
+    color: white;
+    font-size: 2.5vh;
+    margin:0 0 3vh;
+}
+
+.form-label{
+    margin-bottom: 1vh;
+    color: white;
+    font-size: 2vh;
+    display: block;
+}
+
+.input{
+    background-color: black;
+    height: 5.5vh;
+    border-radius: 10px;
+    width: 21vw;
+    color: white;
+    padding-left: 0.5vw;
+}
+
+.contact-form-subject{
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.textarea {
+    background-color: black;
+    width: 100%;
+    height: 23.5vh;
+    border-radius: 10px;
+    padding: 1.2vh;
+    margin-bottom: 2vh;
+    color: white;
+}
+
+.contact-form-submit{
+    width: 100%;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: var(--download-btn-bg);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
