@@ -21,11 +21,6 @@ const links =
         icon: "fa-solid fa-briefcase"
     },
     {
-        title: "SERVICES",
-        link: "#services",
-        icon: "fa-solid fa-clipboard"
-    },
-    {
         title: "CONTACT ME",
         link: "#contact",
         icon: "fa-solid fa-envelope"
