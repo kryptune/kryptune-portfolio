@@ -32,6 +32,9 @@ export default function Contact() {
             })
             if (response.ok){
                 setMessageStatus("Message sent successfully");
+                setTimeout( () => {
+                    setMessageStatus("Send Message")
+                }, 3000)
                 alert('Your message has been sent successfully!');
                 setFormData(
                     {
