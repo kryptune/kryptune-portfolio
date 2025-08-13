@@ -32,9 +32,6 @@ export default function Contact() {
             })
             if (response.ok){
                 setMessageStatus("Message sent successfully");
-                setTimeout( () => {
-                    setMessageStatus("Send Message")
-                }, 3000)
                 alert('Your message has been sent successfully!');
                 setFormData(
                     {
@@ -44,6 +41,9 @@ export default function Contact() {
                         message: ''
                     }
                 );
+                setTimeout( () => {
+                    setMessageStatus("Send Message")
+                }, 3000)
             }else{
                 setMessageStatus("Failed to send message.");
                 alert('Failed to send your message. Please try again later.');
@@ -56,7 +56,7 @@ export default function Contact() {
     }
 
     return (
-        <div className="contact" id="contact">
+        <section className="contact" id="contact">
             <h1 className='contact-title'>Contact Me</h1>
             <p className='contact-description'>Hello there! I'm always available for new opportunities and discussions, so please don't hesitate to get in touch. Have an amazing day!</p>
             <div className='contact-main-container'>
@@ -148,7 +148,7 @@ export default function Contact() {
                 <button type="submit" className='contact-form-submit'>{messageStatus}</button>
             </form>
             </div>
-        </div>
+        </section>
     );
 }
 

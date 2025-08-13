@@ -1,10 +1,10 @@
 import React from 'react';
 import links from './Data/Links';
-export default function Sidebar() {
+export default function Sidebar(props) {
     const linkElements = links.map((link) => (
-        <a key={link.title} href={link.link} className="sidebar--link">
-            <span className='sidebar--icon'><i className={link.icon} ></i></span>
-            <span className='sidebar--link--title'>{link.title}</span>
+        <a key={link.title} href={link.link} className={`sidebar--link ${props.sessionID === link.link.slice(1)? "active-title" : ""}`}>
+            <span className={`sidebar--icon ${props.sessionID === link.link.slice(1)? "active-icon" : ""}`}><i className={link.icon} ></i></span>
+            <span className="sidebar--link--title">{link.title}</span>
         </a>
     )); 
     return (
@@ -14,3 +14,4 @@ export default function Sidebar() {
         </div>
     );
 }
+

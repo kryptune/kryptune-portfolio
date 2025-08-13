@@ -1,12 +1,12 @@
 const project = 
-[
+[   
     {
         id: 1,
-        title: "Tenzies App",
-        description: "A fun dice game where you try to roll all dice to the same number.",
-        link: "https://tenzies-app-omega.vercel.app/",
-        tags: ["React", "JavaScript", "CSS", "localStorage"],
-        image: "/tenzies-app.PNG"
+        title: "Portfolio Website",
+        description: "My personal portfolio website showcasing my projects and skills.",
+        link: "https://kryptune-portfolio.netlify.app/",
+        tags: ["React", "JavaScript", "CSS", "HTML"],
+        image: "/portfolio-website.PNG"
     },
     {
         id: 2,
@@ -18,20 +18,20 @@ const project =
     },
     {
         id: 3,
+        title: "Tenzies App",
+        description: "A fun dice game where you try to roll all dice to the same number.",
+        link: "https://tenzies-app-omega.vercel.app/",
+        tags: ["React", "JavaScript", "CSS", "localStorage"],
+        image: "/tenzies-app.PNG"
+    },
+    {
+        id: 4,
         title: "React Notes",
         description: "A note-taking app built with React and Firebase, allowing you to create and manage notes.",
         link: "https://react-notes-gamma.vercel.app/",
         tags: ["React", "Firebase", "JavaScript", "CSS"],
         image: "/notes-app.PNG"
 
-    },
-    {
-        id: 4,
-        title: "Portfolio Website",
-        description: "My personal portfolio website showcasing my projects and skills.",
-        link: "https://kryptune-portfolio.netlify.app/",
-        tags: ["React", "JavaScript", "CSS", "HTML"],
-        image: "/portfolio-website.PNG"
     },
     {   
         id: 5,

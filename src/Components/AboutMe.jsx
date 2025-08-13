@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutMe() {
     return (
-        <div className="about-me" id="about">
+        <section className="about-me" id="about">
             <h2 className="about-me-title">About Me</h2>
             <p className="about-me-description">
                 I’m Rolando De La Torre, a detail-oriented software developer passionate about building efficient, 
@@ -24,6 +24,6 @@ export default function AboutMe() {
                     <p className="about-me-experience-duration"> 2021 - 2024 </p>
                 </div>
             </div>
-        </div>
+        </section>
     )      
 }

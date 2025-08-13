@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import Sidebar from './Components/Sidebar';
 import Home from './Components/Home';
 import Projects from './Components/Project';
@@ -7,9 +7,56 @@ import AboutMe from './Components/AboutMe';
 import Contact from './Components/Contact';
 
 function App() {
+    const [activeSection, setActiveSection] = useState('home');
+
+  // useEffect to set up the IntersectionObserver
+  useEffect(() => {
+    // Options for the IntersectionObserver
+    const options = {
+      root: null, // The viewport
+      rootMargin: '0px',
+      threshold: 0.3, // 30% of the section must be visible to be considered active
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // If the section is intersecting the viewport, set it as the active section
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    // Find all sections and observe each element
+    const sections = ['home', 'about', 'skills', 'projects', 'contact'].map(id => document.getElementById(id));
+    sections.forEach((section) => {
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    // Cleanup function to disconnect the observer when the component unmounts
+    return () => {
+      sections.forEach((section) => {
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []); // Empty dependency array ensures this effect runs only once on mount
+  console.log(activeSection)
+  // Function to handle smooth scrolling when a sidebar link is clicked
+  const handleScrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      // Update the active section state immediately to give visual feedback
+      setActiveSection(id);
+    }
+  };
   return (
     <div className="portfolio-app">
-      <Sidebar />
+      <Sidebar sessionID={activeSection} />
       <div className="main-content">
         <Home />
         <AboutMe />
@@ -22,3 +69,4 @@ function App() {
 }
 
 export default App
+

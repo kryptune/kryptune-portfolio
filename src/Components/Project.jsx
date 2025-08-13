@@ -2,6 +2,7 @@ import React from 'react';
 import Project_data from './Data/Project-data';
 
 export default function Project() {
+    console.log("EYYY")
     const projectElements = Project_data.map((project) => (
         <div key={project.id} className="project--card">
             <div className="project--image-container">
@@ -21,10 +22,10 @@ export default function Project() {
         </div>
     ));
     return (
-        <div className="project" id='projects'>
+        <section className="projects" id='projects'>
             <h1 className='project-title'>My Projects</h1>
             <div className="project--list">
                 {projectElements}
             </div>
-        </div>
+        </section>
     )}

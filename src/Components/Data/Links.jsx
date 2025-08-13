@@ -21,7 +21,7 @@ const links =
         icon: "fa-solid fa-briefcase"
     },
     {
-        title: "CONTACT ME",
+        title: "CONTACT",
         link: "#contact",
         icon: "fa-solid fa-envelope"
     }

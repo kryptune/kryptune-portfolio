@@ -15,12 +15,12 @@ export default function Skills() {
                 </div>
     )); 
     return (
-        <div className="skills" id="skills">
+        <section className="skills" id="skills">
             <h1 className='skills-title'>My Skills</h1>
             <div className="skills--list">
                 {skillsElements}
             </div>
-        </div>
+        </section>
     );
 }
 

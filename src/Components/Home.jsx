@@ -1,17 +1,114 @@
 import React from "react";
 
 export default function Home() {
+  const particlesContainer = document.getElementById('particles-js');
+  React.useEffect( () => {
+  if (window.particlesJS) {  
+    particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 300,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff" /* Light color for the particles */
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+      }
+      }, [])
   return (
     <section className="home" id="home">
-      <h1>Welcome to My Portfolio</h1>
-      <p>
-        This is the home section where you can find an overview of my work and
-        skills.
-      </p>
-      <a className="common_btn" href="#">
-        Download CV
-        <i aria-hidden="true" className="fa-solid fa-arrow-down-to-line"></i>
-      </a>
+      <div id="particles-js" className="particles-background"></div>
+      <div className="home-container">
+          <h1 className="home--title">Hi, I'm </h1>
+          <h2 className="home--name"> KRYPTUNE </h2>
+          <h3 className="home--profession">Full-Stack Developer | IT Professional</h3>
+          <p className="home--punchline">
+         Transforming ideas into digital products is what I do best.
+          </p>
+          <button className="download-btn" href="#">
+            Download CV
+              <i className="fas fa-arrow-down custom-underline"></i>
+          </button>
+      </div>
     </section>
   );
 }
