@@ -8,6 +8,7 @@ import Contact from './Components/Contact';
 
 function App() {
     const [activeSection, setActiveSection] = useState('home');
+    const [viewedSections, setViewedSections] = useState([]);
 
   // useEffect to set up the IntersectionObserver
   useEffect(() => {
@@ -17,12 +18,15 @@ function App() {
       rootMargin: '0px',
       threshold: 0.3, // 30% of the section must be visible to be considered active
     };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         // If the section is intersecting the viewport, set it as the active section
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
+          setViewedSections(prev => prev.includes(entry.target.id) ? prev : [...prev, entry.target.id]);
+          if (entry.target.id === "home"){
+            setViewedSections([])
+          }
         }
       });
     }, options);
@@ -44,25 +48,17 @@ function App() {
       });
     };
   }, []); // Empty dependency array ensures this effect runs only once on mount
-  console.log(activeSection)
-  // Function to handle smooth scrolling when a sidebar link is clicked
-  const handleScrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      // Update the active section state immediately to give visual feedback
-      setActiveSection(id);
-    }
-  };
+
+
   return (
     <div className="portfolio-app">
-      <Sidebar sessionID={activeSection} />
+      <Sidebar sessionID={activeSection} setActiveSection={setActiveSection} setViewedSections={setViewedSections} />
       <div className="main-content">
         <Home />
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <Contact />
+        <AboutMe viewedSection={viewedSections} />
+        <Skills viewedSection={viewedSections} />
+        <Projects viewedSection={viewedSections} />
+        <Contact viewedSection={viewedSections} />
       </div>
     </div>
   )

@@ -2,27 +2,27 @@ const links =
 [
     {
         title: "HOME",
-        link: "#home",
+        id: "home",
         icon: "fa-solid fa-house"
     },
     {
         title: "ABOUT",
-        link: "#about",
+        id: "about",
         icon: "fa-solid fa-user"
     },
     {
         title: "SKILLS",
-        link: "#skills",
+        id: "skills",
         icon: "fa-solid fa-gear"
     },
     {
         title: "PROJECTS",
-        link: "#projects",
+        id: "projects",
         icon: "fa-solid fa-briefcase"
     },
     {
         title: "CONTACT",
-        link: "#contact",
+        id: "contact",
         icon: "fa-solid fa-envelope"
     }
 ]

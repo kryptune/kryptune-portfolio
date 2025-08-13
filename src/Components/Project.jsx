@@ -1,8 +1,7 @@
 import React from 'react';
 import Project_data from './Data/Project-data';
 
-export default function Project() {
-    console.log("EYYY")
+export default function Project({viewedSection}) {
     const projectElements = Project_data.map((project) => (
         <div key={project.id} className="project--card">
             <div className="project--image-container">
@@ -22,7 +21,7 @@ export default function Project() {
         </div>
     ));
     return (
-        <section className="projects" id='projects'>
+        <section className={`projects ${viewedSection.includes("projects") ? "animate-fade-in-up" : ""} `} id='projects'>
             <h1 className='project-title'>My Projects</h1>
             <div className="project--list">
                 {projectElements}

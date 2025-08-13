@@ -104,10 +104,10 @@ export default function Home() {
           <p className="home--punchline">
          Transforming ideas into digital products is what I do best.
           </p>
-          <button className="download-btn" href="#">
+          <a className="download-btn" href="/RESUME.pdf" download="Rolando dll. De la Torre - RESUME.pdf">
             Download CV
               <i className="fas fa-arrow-down custom-underline"></i>
-          </button>
+          </a>
       </div>
     </section>
   );

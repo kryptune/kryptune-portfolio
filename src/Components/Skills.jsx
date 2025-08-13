@@ -1,7 +1,7 @@
 import React from 'react';
 import skillsData from './Data/Skills-data';
 
-export default function Skills() {
+export default function Skills({viewedSection}) {
     const skillsElements = skillsData.map((skill) => (
         <div key={skill.id} className="skills--container">
                     <div key={skill.id} className="skills--category">{skill.name}</div>
@@ -15,7 +15,7 @@ export default function Skills() {
                 </div>
     )); 
     return (
-        <section className="skills" id="skills">
+        <section className={`skills ${viewedSection.includes("skills") ? "animate-fade-in-up" : ""} `} id="skills">
             <h1 className='skills-title'>My Skills</h1>
             <div className="skills--list">
                 {skillsElements}

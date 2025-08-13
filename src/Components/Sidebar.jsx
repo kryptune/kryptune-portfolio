@@ -1,11 +1,21 @@
 import React from 'react';
 import links from './Data/Links';
-export default function Sidebar(props) {
+export default function Sidebar({sessionID, setActiveSection, setViewedSections}) {
+      // Function to handle smooth scrolling when a sidebar link is clicked
+      const handleScrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          // Update the active section state immediately to give visual feedback
+          setActiveSection(id);
+          setViewedSections(prev => prev.includes(id) ? prev : [...prev, id]);
+        }
+      };
     const linkElements = links.map((link) => (
-        <a key={link.title} href={link.link} className={`sidebar--link ${props.sessionID === link.link.slice(1)? "active-title" : ""}`}>
-            <span className={`sidebar--icon ${props.sessionID === link.link.slice(1)? "active-icon" : ""}`}><i className={link.icon} ></i></span>
+        <div key={link.title} onClick={() => handleScrollToSection(link.id)} className={`sidebar--link ${sessionID === link.id ? "active-title" : ""}`}>
+            <span className={`sidebar--icon ${sessionID === link.id ? "active-icon" : ""}`}><i className={link.icon} ></i></span>
             <span className="sidebar--link--title">{link.title}</span>
-        </a>
+        </div>
     )); 
     return (
         <div className="sidebar">

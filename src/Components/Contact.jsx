@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Contact() {
+export default function Contact({viewedSection}) {
     const [formData, setFormData] = React.useState({
         name: '',
         email: '',
@@ -56,7 +56,7 @@ export default function Contact() {
     }
 
     return (
-        <section className="contact" id="contact">
+        <section className={`contact ${viewedSection.includes("contact") ? "animate-fade-in-up" : ""} `} id="contact">
             <h1 className='contact-title'>Contact Me</h1>
             <p className='contact-description'>Hello there! I'm always available for new opportunities and discussions, so please don't hesitate to get in touch. Have an amazing day!</p>
             <div className='contact-main-container'>
@@ -83,13 +83,13 @@ export default function Contact() {
                 </div>
                 <h2 className='contact-social-title'>Connect with Me</h2>
                 <div className='contact-social-links'>
-                    <a href="https://github.com/kryptune" target="_blank" rel="noopener noreferrer" className='contact-social-github'>
+                    <a href="https://github.com/kryptune" target="_blank" rel="noopener noreferrer" className='contact-social-github' aria-label='GitHub'>
                         <i className="fa-brands fa-github social-icon"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/rolando-de-la-torre-030387358/" target="_blank" rel="noopener noreferrer" className='contact-social-linkedin'>
+                    <a href="https://www.linkedin.com/in/rolando-de-la-torre-030387358/" target="_blank" rel="noopener noreferrer" className='contact-social-linkedin' aria-label='LinkedIn'>
                         <i className="fa-brands fa-linkedin social-icon"></i>
                     </a>
-                    <a href="mailto:rolandodelatorre01@gmail.com" className='contact-info-email'>
+                    <a href="mailto:rolandodelatorre01@gmail.com" className='contact-info-email' aria-label='Contact Email'>
                         <i className="fa-solid fa-envelope social-icon"></i>
                     </a>
                 </div>
