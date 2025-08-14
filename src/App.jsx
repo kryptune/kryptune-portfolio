@@ -8,14 +8,13 @@ import Contact from './Components/Contact';
 
 function App() {
     const [activeSection, setActiveSection] = useState('home');
-
   // useEffect to set up the IntersectionObserver
   useEffect(() => {
     // Options for the IntersectionObserver
     const options = {
       root: null, // The viewport
       rootMargin: '0px',
-      threshold: 0.15, // 10% of the section must be visible to be considered active
+      threshold: 0.15, // 15% of the section must be visible to be considered active
     };
 
     // Find all sections and observe each element
@@ -30,11 +29,21 @@ function App() {
       
           if (entry.target.id === 'home') {
               // Remove is-visible from all sections when navigating back to home
-              sections.forEach(section => {
-                  if (section.id !== 'home') {
-                      section.classList.remove('is-visible');
-                  }
-              });
+            if (window.innerWidth > 768) {
+                // Remove is-visible from all sections except 'home' on large screens
+                sections.forEach(section => {
+                    if (section.id !== 'home') {
+                        section.classList.remove('is-visible');
+                    }
+                });
+            } else {
+                // Remove is-visible from all sections except 'home' and 'about' on small screens
+                sections.forEach(section => {
+                    if (section.id !== 'home' && section.id !== 'about') {
+                        section.classList.remove('is-visible');
+                    }
+                });
+            }
           }
         }
       });
