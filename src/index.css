@@ -1,5 +1,5 @@
 :root {
-  --primary-bg: #121212;
+  --primary-bg: #0d1117;
   --secondary-bg: rgba(11, 36, 52, 0.6);  
   --icon-bg: #151C25;
   --hover-bg: #34E0DA;
@@ -17,7 +17,19 @@
   --muted-foreground: 215 20.2% 65.1%;
 } 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+footer{
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-family: var(--font-open-sans);
+    padding: 2vw;
 }
 
 body {
@@ -25,6 +37,492 @@ body {
     background-color: var(--primary-bg);
     min-height: 100vh;
 }
+
+
+.portfolio-app{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* --- Mobile-First Navbar Styles (default) --- */
+
+/* The main navigation container, which will be a top bar on mobile */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px; /* Fixed height for the mobile navbar */
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* The list of links */
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    gap: 30px; /* Space between links */
+    width:80vw;
+}
+/* The individual links */
+.sidebar--link{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar--title{
+    height: 50px;
+    width: 20vw;
+}
+
+.main-content{
+    margin: 0;
+    width: 100%;
+    overflow-y: auto;
+    background-color: var(--primary-bg);
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Keyframes for a simple fade and slide-up effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0; /* Ensures the element is hidden before the animation starts */
+}
+
+.home {
+        position: relative;
+        height: 40vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: var(--font-poppins)
+}
+.particles-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Place it behind other content */
+}
+.home-container {
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.home--title{
+    color: #A4E0FF;
+    font-size: 1.7vw;
+}
+
+.home--name{
+    color: white;
+    font-size: 5vw;
+    font-family: var(--font-nosifer);
+    margin: 0;
+    font-weight: bold;
+    text-shadow:
+    -3px -3px 0px skyblue, /* Inner shadow from the top-left */
+    3px 3px 0px var(--icon-bg);  /* A darker shadow from the bottom-right for depth */
+}
+
+.home--profession{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2vw;
+    margin-top: 1vh;
+}
+
+.home--punchline{
+    color: white;
+    font-size: 2.5vw;
+}
+
+.download-btn{
+    background-color: transparent;
+    height: 2vh;
+    width: 13vw;
+    font-size: 1vw;
+    color: #00aaff;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px solid #00aaff;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+}
+
+.fa-arrow-down{
+    color: #00aaff;
+    font-size: 1vw;
+}
+
+
+.download-btn:hover{
+    background-color: #00aaff;
+    color: #ffffff;
+}
+
+.download-btn:hover > .fa-arrow-down{
+    color: white;
+}
+
+.about-me-title, .skills-title, .project-title, .contact-title {
+    font-size: 6vw;
+    font-family: var(--font-rajdani);
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: inline-block; 
+    margin: 5vh 0 3vh;
+}
+
+.about-me-title::after, .skills-title::after, .project-title::after, .contact-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%; /* Adjust the width to be half of the text */
+  height: 0.5vh; /* Set the thickness of the line */
+  background-color: var(--hover-bg); /* Choose your color */
+}
+
+.about-me, .skills, .projects, .contact{
+    padding: 3vw;
+    font-family: var(--font-open-sans);
+}
+
+
+.about-me {
+    color: #E0E0E0;
+    background-color: var(--secondary-bg);
+}
+
+.about-me-description {
+    font-size: 2.5vw;
+    line-height: 1.6;
+    margin-top: 1vh;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.about-me-content {
+    font-size: 2vw;
+    line-height: 1.6;
+    margin: 4vh 0 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 5vw;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.about-me-education, .about-me-experience {
+    font-weight: normal;
+    border: solid 0.5px rgba(52, 224, 218, 0.3);
+    border-radius: 3vw;
+    padding: 3vw;
+    width: 80%;
+}
+
+.about-me--title  {
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+    margin:0px 0px 2vw;
+}
+
+.fa-graduation-cap, .fa-user-tie {
+    font-size: 3vw;
+    color: #34E0DA;
+    margin-right: 0.3rem; 
+}
+
+.about-me-education-degree, .about-me-experience-role {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 2vw;
+}
+
+.skills--list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    margin: 2vh 0 3vh;
+}
+
+.skills--container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: var(--font-istok-web);
+    border: solid 0.5px rgba(52, 224, 218, 0.5);
+    border-radius: 2vh;
+    padding: 3vw;
+}
+
+.skills--category {
+    font-size: 3vw;
+    margin-bottom: 3vw;
+
+}
+
+.skills--items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+    margin-left: 0.5vw;
+}
+
+.skills--item {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.7rem;
+    border: solid 0.5px rgba(52, 224, 218, 0.5);
+    font-size: 2vw;
+}
+
+
+.projects{
+    color: #E0E0E0;
+    background-color: var(--secondary-bg);
+    margin: 0;
+}
+
+.project--list {
+    margin: 3vw 0 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 3vw;
+}
+
+.project--card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(11, 36, 52, 0.8);  
+    border-radius: 1vw;
+    color: var(--text-color-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: solid 0.5px rgba(52, 224, 218, 0.5);
+}
+
+.project--info {
+    display: flex;
+    font-family: var(--font-istok-web);
+    flex-direction: column;
+    padding: 3vw;
+    flex-grow: 1;
+}
+
+.project--title {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #34E0DA;
+    margin: 0 0 0.5rem;
+}
+
+.project--description {
+    font-size: 3vw;
+    color: #E0E0E0;
+}
+
+.project--tags{
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+    justify-content: center;
+}
+
+.project--tag{
+    background-color: #2B283A;
+    color: #87CEEB;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.7rem;
+    font-size: 2.5vw;
+}
+
+.project--image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 40vw;
+    height: 43vw;
+    border-radius: 1vw 1vw 0 0;
+    
+}
+
+.project--image {
+    width: 100%;
+    transition: transform 0.3s ease;
+    min-height: 40vw;
+}
+
+.project--image:hover {
+    transform: scale(1.05);
+}
+
+.contact-main-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vw;
+    padding: 1.5vw;
+    gap: 4vw;
+}
+
+.contact-description {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2.5vw;
+}
+
+.contact-info-container{
+    margin: 1.5vw 0px 3vw;
+    font-size: 2vw;
+}
+
+.icon {
+    color: var(--hover-bg);
+    margin-right: 0.5vw;
+}
+
+.contact-info-title, .contact-social-title {
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 3vw;
+}
+
+.contact-info-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:3.5vw;
+    padding: 2vw;
+    margin-bottom: 3vw;
+}
+
+.contact-social-links{
+    margin-left: 3vw;
+}
+
+.info-title {
+    color: white;
+    margin-right: 0.5vw;
+}
+
+.info-details{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.social-icon{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2.5vw;
+    margin-right: 1.3vw;
+}
+
+.social-icon:hover{
+    color: var(--hover-bg)
+}
+
+.contact-form-container{
+    border: solid 0.5px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 1.1vw;
+    width: 100%;
+}
+
+.name-email-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
+}
+
+.name-container{
+    margin-right: 2vw;
+}
+
+.contact-form-title{
+    color: white;
+    font-size: 2.5vw;
+    margin:0 0 3vh;
+}
+
+.form-label{
+    margin-bottom: 1vh;
+    color: white;
+    font-size: 2vw;
+    display: block;
+}
+
+.input{
+    background-color: var(--primary-bg);
+    height: 5.5vw;
+    border-radius: 0.7vw;
+    width: 43vw;
+    color: white;
+    padding-left: 0.5vw;
+    border: solid 0.5px rgba(255, 255, 255, 0.5);
+    font-size: 2vw;
+}
+
+.contact-form-subject{
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.textarea {
+    background-color: var(--primary-bg);
+    width: 100%;
+    height: 23.5vh;
+    border-radius: 10px;
+    padding: 1.2vh;
+    margin-bottom: 0;
+    color: white;
+    border: solid 0.5px rgba(255, 255, 255, 0.5);
+    font-size: 2vw;
+}
+
+.contact-form-submit{
+    width: 100%;
+    height: 5vw;
+    border-radius: 10px;
+    background-color: var(--download-btn-bg);
+}
+
+
+@media (min-width: 768px) {
 
 .portfolio-app{
     margin: 0;
@@ -36,15 +534,20 @@ body {
     width: 15vw;
     height: 100vh;
     background-color: rgba(11, 36, 52, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    color: #FBC246;
+
     position: fixed;
     top: 0;
     left: 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-links{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    
 }
 
 .sidebar--title{
@@ -53,7 +556,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 18vh;
-    width: 100%;
+    width: 15vw;
     margin-bottom: 5vh;
 }
 
@@ -120,6 +623,8 @@ body {
     z-index: 1;
 }
 
+
+
 /* Keyframes for a simple fade and slide-up effect */
 @keyframes fadeInUp {
   from {
@@ -141,7 +646,7 @@ body {
 
 .home {
         position: relative;
-        height: 100vh;
+        height: 100%;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -157,6 +662,8 @@ body {
         height: 100%;
         z-index: -1;
 }
+
+
 .home-container {
         position: relative;
         z-index: 1;
@@ -169,11 +676,12 @@ body {
 
 .home--title{
     color: #A4E0FF;
+    font-size: 1.7vw;
 }
 
 .home--name{
     color: white;
-    font-size: 9vh;
+    font-size: 4vw;
     font-family: var(--font-nosifer);
     margin: 0;
     font-weight: bold;
@@ -228,22 +736,17 @@ body {
 
 .about-me-title, .skills-title, .project-title, .contact-title {
     font-size: 2.5rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--font-poppins);
     font-weight: bold;
     color: white;
     position: relative;
     display: inline-block; 
-    margin: 3vh 0 3vh;
+    margin: 2vh 0 3vh;
 }
 
-.about-me-title::after, .skills-title::after, .project-title::after, .contact-title::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40%; /* Adjust the width to be half of the text */
-  height: 0.5vh; /* Set the thickness of the line */
-  background-color: var(--hover-bg); /* Choose your color */
+.about-me, .skills, .projects, .contact{
+    padding: 2vw;
+    font-family: var(--font-open-sans);
 }
 
 
@@ -266,6 +769,7 @@ body {
     line-height: 1.6;
     margin: 4vh 0 3vh;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 5vw;
@@ -278,13 +782,14 @@ body {
     border-radius: 2vh;
     padding: 1.5rem;
     width: 32vw;
+    height: 18vw;
 }
 
 .about-me--title  {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    margin-bottom: 0.5rem;
+    margin: 1rem 0px 0.5rem;
 }
 
 .fa-graduation-cap, .fa-user-tie {
@@ -298,11 +803,6 @@ body {
     color: white;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-}
-
-
-.skills{
-    padding: 2vw;
 }
 
 .skills--list {
@@ -346,17 +846,16 @@ body {
     font-size: 0.9rem;
 }
 
-
 .projects{
     color: #E0E0E0;
     background-color: var(--secondary-bg);
     margin: 0;
-    padding: 2vw;
 }
 
 .project--list {
     margin: 2vh 0 3vh;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -433,12 +932,6 @@ body {
     transform: scale(1.05);
 }
 
-.contact{
-    padding: 2vw;
-    font-family: var(--font-open-sans);
-
-}
-
 .contact-main-container{
     display: flex;
     flex-direction: row;
@@ -455,6 +948,7 @@ body {
 
 .contact-info-container{
     margin: 1.5vh auto 0 3vh;
+    font-size: 1vw;
 }
 
 .icon {
@@ -473,6 +967,11 @@ body {
     flex-direction: column;
     gap:3.5vh;
     margin-bottom: 6vh;
+    padding: 0;
+}
+
+.contact-social-links{
+    margin-left: 0;
 }
 
 .info-title {
@@ -499,6 +998,7 @@ body {
     border-radius: 10px;
     padding: 1.1vw;
     width: 46vw;
+    font-size: 2vw;
 }
 
 .name-email-container{
@@ -518,20 +1018,25 @@ body {
 }
 
 .form-label{
-    margin-bottom: 1vh;
+    margin-bottom: 0;
     color: white;
     font-size: 2vh;
     display: block;
 }
 
+.message{
+    margin-bottom: 0.5vw;
+}
+
 .input{
     background-color: var(--primary-bg);
-    height: 5.5vh;
+    height: 5vh;
     border-radius: 10px;
     width: 21vw;
     color: white;
     padding-left: 0.5vw;
     border: solid 0.5px rgba(255, 255, 255, 0.5);
+    font-size: 1vw;
 }
 
 .contact-form-subject{
@@ -545,9 +1050,10 @@ body {
     height: 23.5vh;
     border-radius: 10px;
     padding: 1.2vh;
-    margin-bottom: 2vh;
+    margin-bottom: 0;
     color: white;
     border: solid 0.5px rgba(255, 255, 255, 0.5);
+    font-size: 1vw;
 }
 
 .contact-form-submit{
@@ -557,15 +1063,8 @@ body {
     background-color: var(--download-btn-bg);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+footer{
+    font-size: 1vw;
+}
+
 }

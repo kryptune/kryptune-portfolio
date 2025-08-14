@@ -59,6 +59,7 @@ function App() {
         <Skills viewedSection={viewedSections} />
         <Projects viewedSection={viewedSections} />
         <Contact viewedSection={viewedSections} />
+        <footer>Copyright © 2025 Kryptune - All Rights Reserved</footer>
       </div>
     </div>
   )

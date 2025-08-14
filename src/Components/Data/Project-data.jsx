@@ -13,7 +13,7 @@ const project =
         title: "Blackjack App",
         description: "A simple blackjack game where you can play against the dealer.",
         link: "https://blckjck2.netlify.app/",
-        tags: ["JavaScript", "CSS", "Render", "Python", "PostgreSQL", "Flask"],
+        tags: ["JavaScript", "CSS", "Python", "PostgreSQL", "Flask"],
         image: "/blackjack-app.PNG"
     },
     {

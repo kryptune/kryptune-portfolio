@@ -135,7 +135,7 @@ export default function Contact({viewedSection}) {
                     required
                     className='contact-form-subject input'
                 />
-                <label htmlFor="contact-form-message" className='form-label'>Message</label>
+                <label htmlFor="contact-form-message" className='form-label message'>Message</label>
                 <textarea
                     id="contact-form-message"
                     name="message"
