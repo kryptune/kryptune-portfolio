@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutMe({viewedSection}) {
     return (
-        <section className={`about-me ${viewedSection.includes("about") ? "animate-fade-in-up" : ""} `} id="about">
+        <section className="about-me animate-fade-in-up" id="about">
             <h2 className="about-me-title">About Me</h2>
             <p className="about-me-description">
                 I’m Rolando De La Torre, a detail-oriented software developer passionate about building efficient, 

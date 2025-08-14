@@ -15,7 +15,7 @@ export default function Skills({viewedSection}) {
                 </div>
     )); 
     return (
-        <section className={`skills ${viewedSection.includes("skills") ? "animate-fade-in-up" : ""} `} id="skills">
+        <section className="skills animate-fade-in-up" id="skills">
             <h1 className='skills-title'>My Skills</h1>
             <div className="skills--list">
                 {skillsElements}

@@ -8,7 +8,6 @@ import Contact from './Components/Contact';
 
 function App() {
     const [activeSection, setActiveSection] = useState('home');
-    const [viewedSections, setViewedSections] = useState([]);
 
   // useEffect to set up the IntersectionObserver
   useEffect(() => {
@@ -16,23 +15,31 @@ function App() {
     const options = {
       root: null, // The viewport
       rootMargin: '0px',
-      threshold: 0.3, // 30% of the section must be visible to be considered active
+      threshold: 0.15, // 10% of the section must be visible to be considered active
     };
+
+    // Find all sections and observe each element
+    const sections = ['home', 'about', 'skills', 'projects', 'contact'].map(id => document.getElementById(id));
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         // If the section is intersecting the viewport, set it as the active section
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
-          setViewedSections(prev => prev.includes(entry.target.id) ? prev : [...prev, entry.target.id]);
-          if (entry.target.id === "home"){
-            setViewedSections([])
+          entry.target.classList.add('is-visible');
+      
+          if (entry.target.id === 'home') {
+              // Remove is-visible from all sections when navigating back to home
+              sections.forEach(section => {
+                  if (section.id !== 'home') {
+                      section.classList.remove('is-visible');
+                  }
+              });
           }
         }
       });
     }, options);
 
-    // Find all sections and observe each element
-    const sections = ['home', 'about', 'skills', 'projects', 'contact'].map(id => document.getElementById(id));
     sections.forEach((section) => {
       if (section) {
         observer.observe(section);
@@ -52,13 +59,13 @@ function App() {
 
   return (
     <div className="portfolio-app">
-      <Sidebar sessionID={activeSection} setActiveSection={setActiveSection} setViewedSections={setViewedSections} />
+      <Sidebar sessionID={activeSection} setActiveSection={setActiveSection} />
       <div className="main-content">
         <Home />
-        <AboutMe viewedSection={viewedSections} />
-        <Skills viewedSection={viewedSections} />
-        <Projects viewedSection={viewedSections} />
-        <Contact viewedSection={viewedSections} />
+        <AboutMe />
+        <Skills />
+        <Projects />
+        <Contact />
         <footer>Copyright © 2025 Kryptune - All Rights Reserved</footer>
       </div>
     </div>

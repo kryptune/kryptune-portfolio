@@ -56,7 +56,7 @@ export default function Contact({viewedSection}) {
     }
 
     return (
-        <section className={`contact ${viewedSection.includes("contact") ? "animate-fade-in-up" : ""} `} id="contact">
+        <section className="contact animate-fade-in-up" id="contact">
             <h1 className='contact-title'>Contact Me</h1>
             <p className='contact-description'>Hello there! I'm always available for new opportunities and discussions, so please don't hesitate to get in touch. Have an amazing day!</p>
             <div className='contact-main-container'>

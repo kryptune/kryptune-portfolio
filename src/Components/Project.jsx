@@ -21,7 +21,7 @@ export default function Project({viewedSection}) {
         </div>
     ));
     return (
-        <section className={`projects ${viewedSection.includes("projects") ? "animate-fade-in-up" : ""} `} id='projects'>
+        <section className="projects animate-fade-in-up" id='projects'>
             <h1 className='project-title'>My Projects</h1>
             <div className="project--list">
                 {projectElements}
