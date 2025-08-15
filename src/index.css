@@ -158,19 +158,21 @@ body {
 
 .home--profession{
     color: rgba(255, 255, 255, 0.7);
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin-top: 1vh;
 }
 
 .home--punchline{
     color: white;
-    font-size: 2.5vw;
+    font-size: 2vw;
+    margin-top: 3vw;
 }
 
 .download-btn{
     background-color: transparent;
-    height: 2vh;
-    width: 13vw;
+    padding: 1vw;
+    height: 3.5vw;
+    width: auto;
     font-size: 1vw;
     color: #00aaff;
     margin-top: 5vh;
@@ -233,6 +235,7 @@ body {
     font-size: 2.5vw;
     line-height: 1.6;
     margin-top: 1vh;
+    text-align: justify;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -242,6 +245,8 @@ body {
     margin: 4vh 0 3vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap; /* Allows cards to wrap to a new line */
+    align-items: stretch; /* This is the key property! */
     justify-items: center;
     align-items: center;
     gap: 5vw;
@@ -365,7 +370,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 0.7rem;
-    margin-top: 1.2rem;
+    margin: 2vw 0 2.5vw;
     justify-content: center;
 }
 
@@ -470,11 +475,12 @@ body {
 .name-email-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 2vh;
 }
 
-.name-container{
-    margin-right: 2vw;
+.name-container, .email-container{
+    width: 48%;
 }
 
 .contact-form-title{
@@ -494,7 +500,7 @@ body {
     background-color: var(--primary-bg);
     height: 5.5vw;
     border-radius: 0.7vw;
-    width: 41vw;
+    width: 100%;
     color: white;
     padding-left: 0.5vw;
     border: solid 0.5px rgba(255, 255, 255, 0.5);
@@ -521,6 +527,7 @@ body {
 .contact-form-submit{
     width: 100%;
     height: 5vw;
+    margin-top: 1vw;
     border-radius: 10px;
     background-color: var(--download-btn-bg);
     font-size: 2vw;
@@ -560,7 +567,7 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
-    height: 18vh;
+    height: 8.5vw;
     width: 15vw;
     margin-bottom: 5vh;
 }
@@ -595,7 +602,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3vh;
+  font-size: 1.5vw;
 }
 
 .sidebar--link--title{
@@ -605,6 +612,7 @@ body {
     padding-left: 1vw;
     justify-content: left;
     align-items: center;
+    font-size: 1vw;
 }
 
 .active-icon{
@@ -686,16 +694,19 @@ body {
 .home--punchline{
     color: white;
     font-size: 4vh;
+    margin-top: 2vw;
 }
 
 .download-btn{
     background-color: transparent;
-    height: 7vh;
-    width: 10vw;
+    padding: 1vw;
+    height: 3.5vw;
+    width: auto;
     font-size: 2vh;
     color: #00aaff;
-    margin-top: 5vh;
+    margin-top: 7vh;
     display: flex;
+    white-space: nowrap;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
@@ -757,7 +768,8 @@ body {
     margin: 4vh 0 3vh;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows cards to wrap to a new line */
+    align-items: stretch; /* This is the key property! */
     justify-content: center;
     gap: 5vw;
     color: rgba(255, 255, 255, 0.7);
@@ -769,7 +781,7 @@ body {
     border-radius: 2vh;
     padding: 1.5rem;
     width: 32vw;
-    height: 18vw;
+    flex-grow: auto;
 }
 
 .about-me--title  {
@@ -793,10 +805,13 @@ body {
 }
 
 .skills--list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    /* Creates 3 columns of equal width */
+    grid-template-columns: repeat(3, 1fr);
+    /* Creates 2 rows of equal height */
+    grid-template-rows: repeat(2, 1fr);
+    align-items: stretch;
+    justify-content: stretch;
     gap: 2vw;
     margin: 2vh 0 3vh;
 }
@@ -804,8 +819,6 @@ body {
 .skills--container {
     display: flex;
     flex-direction: column;
-    height: 30vh;
-    width: 23vw;
     color: white;
     font-family: var(--font-istok-web);
     border: solid 0.5px rgba(52, 224, 218, 0.5);
@@ -821,7 +834,6 @@ body {
 
 .skills--items{
     display: flex;
-    flex-wrap: wrap;
     gap: 1vw;
     margin-left: 0.5vw;
 }
@@ -842,10 +854,11 @@ body {
 .project--list {
     margin: 2vh 0 3vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 2rem;
 }
 
@@ -857,7 +870,6 @@ body {
     width: 33vw;
     color: var(--text-color-light);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    height: 78vh;
     border: solid 0.5px rgba(52, 224, 218, 0.5);
 }
 
@@ -885,7 +897,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.7rem;
-    margin-top: 1.2rem;
+    margin: 2vw 0 2.5vw;
     justify-content: center;
 }
 
@@ -903,7 +915,7 @@ body {
     align-items: center;
     overflow-y: auto;
     overflow-x: hidden;
-    min-height: 40vh;
+    min-height: 43vh;
     height: 43vh;
     border-radius: 1vw 1vw 0 0;
     
@@ -912,7 +924,7 @@ body {
 .project--image {
     width: 100%;
     transition: transform 0.3s ease;
-    min-height: 40vh;
+    min-height: 42.2vh;
 }
 
 .project--image:hover {
@@ -991,11 +1003,12 @@ body {
 .name-email-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 2vh;
 }
 
-.name-container{
-    margin-right: auto;
+.name-container, .email-container{
+    width: 48%;
 }
 
 .contact-form-title{
@@ -1019,7 +1032,7 @@ body {
     background-color: var(--primary-bg);
     height: 5vh;
     border-radius: 10px;
-    width: 21vw;
+    width: 100%;
     color: white;
     padding-left: 0.5vw;
     border: solid 0.5px rgba(255, 255, 255, 0.5);
@@ -1046,6 +1059,7 @@ body {
 .contact-form-submit{
     width: 100%;
     height: 5vh;
+    margin-top: 0px;
     border-radius: 10px;
     background-color: var(--download-btn-bg);
     font-size: 1vw;
