@@ -98,16 +98,21 @@ export default function Home() {
     <section className="home" id="home">
       <div id="particles-js" className="particles-background"></div>
       <div className="home-container">
-          <h1 className="home--title">Hi, I'm </h1>
-          <h2 className="home--name"> KRYPTUNE </h2>
-          <h3 className="home--profession">Full-Stack Developer | IT Professional</h3>
-          <p className="home--punchline">
-         Transforming ideas into digital products is what I do best.
-          </p>
-          <a className="download-btn" href="/RESUME.pdf" download="Rolando dll. De la Torre - RESUME.pdf">
-            Download CV
-              <i className="fas fa-arrow-down custom-underline"></i>
-          </a>
+            <h1 className="home--title fade-in-text">Hi, I'm </h1>
+            <h2 className="home--name slide-up-text"> KRYPTUNE </h2>
+            <h3 className="home--profession">Full-Stack Developer | IT Professional</h3>
+            <p className="home--punchline">
+                Transforming ideas into digital products is what I do best.
+            </p>
+            <div className="home-anchors">
+            <a className="download-btn" href="/RESUME.pdf" download="Rolando dll. De la Torre - RESUME.pdf">
+              Download CV
+                <i className="fas fa-arrow-down custom-underline"></i>
+            </a>
+            <a className="view-projects" href="#projects" > SEE PROJECTS 
+                <span> <i className="fa-solid fa-briefcase"></i> </span>
+            </a>
+            </div>
       </div>
     </section>
   );

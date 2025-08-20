@@ -26,6 +26,17 @@ export default function Sidebar({sessionID, setActiveSection}) {
             <div className={width < 768 ? 'navbar-links' : "sidebar-links"}>   
                 {linkElements}
             </div>
+            <div className='sidebar-social-links'>
+               <a href="https://github.com/kryptune" target="_blank" rel="noopener noreferrer" className='contact-social-github' aria-label='GitHub'>
+                   <i className="fa-brands fa-github side-icon"></i>
+               </a>
+               <a href="https://www.linkedin.com/in/rolando-de-la-torre-030387358/" target="_blank" rel="noopener noreferrer" className='contact-social-linkedin' aria-label='LinkedIn'>
+                   <i className="fa-brands fa-linkedin side-icon"></i>
+               </a>
+               <a href="mailto:rolandodelatorre01@gmail.com" className='contact-info-email' aria-label='Contact Email'>
+                   <i className="fa-solid fa-envelope side-icon"></i>
+               </a>
+            </div>
         </div>
     );
 }
