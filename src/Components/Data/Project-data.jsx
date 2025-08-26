@@ -21,7 +21,7 @@ const project =
         title: "Tenzies App",
         description: "A fun dice game where you try to roll all dice to the same number.",
         link: "https://tenzies-app-omega.vercel.app/",
-        tags: ["React", "JavaScript", "CSS", "localStorage"],
+        tags: ["React", "JavaScript", "Tailwind", "localStorage"],
         image: "/tenzies-app.PNG"
     },
     {
