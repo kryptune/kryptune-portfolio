@@ -5,7 +5,7 @@ const project =
         title: "WeatherNow App",
         description: "WeatherNow is a modern weather app that gives you up-to-date forecasts with a simple, intuitive interface.",
         link: "https://weather-app-chi-seven-11.vercel.app/",
-        tags: ["React", "JavaScript", "Tailwind", "HTML", "API", "localStorage" ],
+        tags: ["React", "JavaScript", "Tailwind", "API", "localStorage" ],
         image: "/weather-app.PNG"
     },
     {
