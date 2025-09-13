@@ -1,6 +1,14 @@
 const project = 
 [   
     {
+        id: 0,
+        title: "WeatherNow App",
+        description: "WeatherNow is a modern weather app that gives you up-to-date forecasts with a simple, intuitive interface.",
+        link: "https://weather-app-chi-seven-11.vercel.app/",
+        tags: ["React", "JavaScript", "Tailwind", "HTML", "API", "localStorage" ],
+        image: "/weather-app.PNG"
+    },
+    {
         id: 1,
         title: "Portfolio Website",
         description: "My personal portfolio website showcasing my projects and skills.",
