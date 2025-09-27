@@ -13,7 +13,7 @@ const links =
     {
         title: "SKILLS",
         id: "skills",
-        icon: "fa-solid fa-gear"
+        icon: "fa-solid fa-laptop-code"
     },
     {
         title: "PROJECTS",

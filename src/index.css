@@ -820,21 +820,21 @@ body {
 .about-me {
     color: #E0E0E0;
     background-color: var(--secondary-bg);
-    padding: 2vw;
+    padding: 2vw 2vw 3vw;
     font-family: var(--font-open-sans);
 }
 
 .about-me-description {
-    font-size: 2.5vh;
+    font-size: 3vh;
     line-height: 1.6;
     margin-top: 2vh;
     color: rgba(255, 255, 255, 0.7);
 }
 
 .about-me-content {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.6;
-    margin: 4vh 0 3vh;
+    margin: 7vh 0 5vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; /* Allows cards to wrap to a new line */
