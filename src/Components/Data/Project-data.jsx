@@ -4,7 +4,7 @@ const project = [
     title: "Marci Realty",
     description:
       "A client-facing web app replica built to showcase front-end proficiency, reusable components, and optimized performance.",
-    link: "https://weather-app-chi-seven-11.vercel.app/",
+    link: "https://marcirealty.vercel.app/",
     tags: ["React", "Tailwind", "Framer-motion", "Swiper"],
     image: "/marci.PNG",
   },
@@ -22,7 +22,7 @@ const project = [
     title: "Portfolio Website",
     description:
       "My personal portfolio website showcasing my projects and skills.",
-    link: "https://kryptune-portfolio.netlify.app/",
+    link: "https://kryptune-portfolio.vercel.app/",
     tags: ["React", "JavaScript", "CSS", "HTML"],
     image: "/portfolio-website.PNG",
   },
