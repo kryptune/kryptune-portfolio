@@ -1,6 +1,34 @@
 const project = [
   {
-    id: 0,
+    id: 9,
+    title: "TradeHub",
+    description:
+      "A full-stack microservices-based trading platform with real-time market data, portfolio management, and order execution.",
+    link: "",
+    tags: [
+      "React",
+      "Tailwind",
+      "Typescript",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Kafka",
+      "Docker",
+      "WebSocket",
+    ],
+    image: "/tradehub.PNG",
+  },
+  {
+    id: 8,
+    title: "OmniChat",
+    description:
+      "An omni-channel communication application that enables seamless messaging across chat, SMS, email, and voice calls, built using React and Node.js.",
+    link: "",
+    tags: ["React", "Tailwind", "Node.js", "Twilio", "Google API", "WebSocket"],
+    image: "/tradehub.PNG",
+  },
+  {
+    id: 7,
     title: "Marci Realty",
     description:
       "A client-facing web app replica built to showcase front-end proficiency, reusable components, and optimized performance.",
@@ -9,7 +37,7 @@ const project = [
     image: "/marci.PNG",
   },
   {
-    id: 1,
+    id: 6,
     title: "WeatherNow App",
     description:
       "WeatherNow is a modern weather app that gives you up-to-date forecasts with a simple, intuitive interface.",
@@ -18,7 +46,7 @@ const project = [
     image: "/weather-app.PNG",
   },
   {
-    id: 2,
+    id: 5,
     title: "Portfolio Website",
     description:
       "My personal portfolio website showcasing my projects and skills.",
@@ -27,7 +55,7 @@ const project = [
     image: "/portfolio-website.PNG",
   },
   {
-    id: 3,
+    id: 4,
     title: "Blackjack App",
     description:
       "A simple blackjack game where you can play against the dealer.",
@@ -36,7 +64,7 @@ const project = [
     image: "/blackjack-app.PNG",
   },
   {
-    id: 4,
+    id: 3,
     title: "Tenzies App",
     description:
       "A fun dice game where you try to roll all dice to the same number.",
@@ -45,7 +73,7 @@ const project = [
     image: "/tenzies-app.PNG",
   },
   {
-    id: 5,
+    id: 2,
     title: "React Notes",
     description:
       "A note-taking app built with React and Firebase, allowing you to create and manage notes.",
@@ -54,7 +82,7 @@ const project = [
     image: "/notes-app.PNG",
   },
   {
-    id: 6,
+    id: 1,
     title: "Airbnb Clone",
     description:
       "A clone of the Airbnb website, built with React and styled-components.",
@@ -63,7 +91,7 @@ const project = [
     image: "/airbnb-app.PNG",
   },
   {
-    id: 7,
+    id: 0,
     title: "Meme App",
     description: "An app that generates random memes using the Meme API.",
     link: "https://meme-app-theta.vercel.app/",
