@@ -16,7 +16,7 @@ const project = [
       "Docker",
       "WebSocket",
     ],
-    image: "/tradehub.PNG",
+    image: "/tradehub.png",
   },
   {
     id: 8,
@@ -25,7 +25,7 @@ const project = [
       "An omni-channel communication application that enables seamless messaging across chat, SMS, email, and voice calls, built using React and Node.js.",
     link: "",
     tags: ["React", "Tailwind", "Node.js", "Twilio", "Google API", "WebSocket"],
-    image: "/tradehub.PNG",
+    image: "/omniChat.PNG",
   },
   {
     id: 7,
